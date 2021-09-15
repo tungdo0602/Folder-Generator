@@ -1,36 +1,3 @@
-::[Bat To Exe Converter]
-::
-::YAwzoRdxOk+EWAnk
-::fBw5plQjdG8=
-::YAwzuBVtJxjWCl3EqQJgSA==
-::ZR4luwNxJguZRRnk
-::Yhs/ulQjdF+5
-::cxAkpRVqdFKZSjk=
-::cBs/ulQjdF+5
-::ZR41oxFsdFKZSDk=
-::eBoioBt6dFKZSDk=
-::cRo6pxp7LAbNWATEpCI=
-::egkzugNsPRvcWATEpCI=
-::dAsiuh18IRvcCxnZtBJQ
-::cRYluBh/LU+EWAnk
-::YxY4rhs+aU+JeA==
-::cxY6rQJ7JhzQF1fEqQJQ
-::ZQ05rAF9IBncCkqN+0xwdVs0
-::ZQ05rAF9IAHYFVzEqQJQ
-::eg0/rx1wNQPfEVWB+kM9LVsJDGQ=
-::fBEirQZwNQPfEVWB+kM9LVsJDGQ=
-::cRolqwZ3JBvQF1fEqQJQ
-::dhA7uBVwLU+EWDk=
-::YQ03rBFzNR3SWATElA==
-::dhAmsQZ3MwfNWATElA==
-::ZQ0/vhVqMQ3MEVWAtB9wSA==
-::Zg8zqx1/OA3MEVWAtB9wSA==
-::dhA7pRFwIByZRRnk
-::Zh4grVQjdCyDJGyX8VAjFDpQQQ2MNXiuFLQI5/rHy++UqVkSRN4cdYuJ5pKBLOQW+AXDcJgoxHtOl9lCCQNdHg==
-::YB416Ek+ZG8=
-::
-::
-::978f952a14a936cc963da21a135fa983
 @echo off
 color 1
 echo ███████╗░█████╗░██╗░░░░░██████╗░███████╗██████╗░
@@ -64,7 +31,7 @@ IF /I "%CHOOSE%" EQU "3" GOTO EXIT
 
 :GENERATOR
 cls
-mkdir \\?\%cd%\%NAMEG%
+mkdir "\\?\%cd%\%NAMEG%"
 color 2
 echo Done!
 pause
@@ -72,7 +39,7 @@ exit
 
 :DELETEF
 cls
-rd \\?\%cd%\%NAMED%
+rd "\\?\%cd%\%NAMED%"
 color 2
 echo Done!
 pause
@@ -101,7 +68,7 @@ IF /I "%FCGQ%" NEQ "2" GOTO EXIT
 
 :DELETEF2
 cls
-rd \\?\%DPATH%\%DFNAME%
+rd "\\?\%DPATH%\%DFNAME%"
 color 2
 echo Done!
 pause
@@ -119,7 +86,7 @@ goto DELETEF2
 
 :GENERATOR2
 cls
-mkdir \\?\%FPATH%\%CFGNAME%
+mkdir "\\?\%FPATH%\%CFGNAME%"
 color 2
 echo Done!
 pause
