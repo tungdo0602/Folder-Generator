@@ -1,4 +1,4 @@
-# Folder-Generator
+# Folder Generator
 ## What Is Folder-Generator
 #### Folder Generator Is a tool to allow user create folder!
 ## What it can do?
