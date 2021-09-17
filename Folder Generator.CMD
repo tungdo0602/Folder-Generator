@@ -51,9 +51,11 @@ exit
 :FOLDERDQ
 echo [1] Current Path
 echo [2] Custom Path
+echo [3] Force Mode
 SET /P Del=Your Choose:
 IF /I "%Del%" EQU "1" GOTO DELETEF
 IF /I "%Del%" EQU "2" GOTO CUSTOMFD
+IF /I "%Del%" EQU "3" GOTO FORCE
 IF /I "%Del%" NEQ "1" GOTO EXIT
 IF /I "%Del%" NEQ "2" GOTO EXIT
 
@@ -65,6 +67,20 @@ IF /I "%FCGQ%" EQU "1" GOTO FOLDERGEN
 IF /I "%FCGQ%" EQU "2" GOTO CUSTOMFG
 IF /I "%FCGQ%" NEQ "1" GOTO EXIT
 IF /I "%FCGQ%" NEQ "2" GOTO EXIT
+IF /I "%FCGQ%" NEQ "3" GOTO EXIT
+
+:FORCE
+SET /P FDPATH=Path: 
+SET /P FDFNAME=Name Of The Folder: 
+goto forcedelete
+
+:forcedelete
+cls
+rmdir "\\.\%FDPATH%\%FDFNAME%" /S /Q
+color 2
+echo Done!
+pause
+exit
 
 :DELETEF2
 cls
@@ -81,7 +97,7 @@ goto GENERATOR2
 
 :CUSTOMFD
 SET /P DPATH=Path: 
-SET /P DFNAME=Name Of The Folder:
+SET /P DFNAME=Name Of The Folder: 
 goto DELETEF2
 
 :GENERATOR2
